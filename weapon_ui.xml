@@ -1,0 +1,27 @@
+<Defaults>
+    <Button textColor="rgb(1,1,1)" 
+        colors="rgba(0,0,0,0.7)|rgba(0.3,0.3,0.3,0.3)|rgba(1,1,1,0.5)|rgba(0,0,0,0.9)"
+        tooltipPosition = "Above"/>
+    <Button class="WideButton" height="20" width="30"/>     
+    <Button class="SquaredButton" height="20" width="20"/>     
+</Defaults>
+
+<Panel class="ButtonsPanel" id="ButtonsPanel"
+    position="0 0 -6"
+    rotation="180 180 0"
+    height="80">
+    <!-- color="#19197040"> -->
+    <TableLayout>
+        <Row class="top" >
+            <Panel>
+                <Button id="FixButton" onClick="fixWeapon" class="WideButton" active="false" offsetXY="5 40" rectAlignment = "MiddleLeft">Fix</Button>
+                <Button id="StateChangeButton" onClick="changeWeaponState" class="SquaredButton" offsetXY="5 0" rectAlignment = "MiddleLeft">×</Button>
+                <Button id="ReloadButton" onClick="Reload" class="SquaredButton" offsetXY="-5 0" rectAlignment="MiddleRight">R</Button>
+            </Panel>
+        </Row>
+        <Row class="top">
+            <Button id="AmmoButton" onClick="changeValue" class="WideButton" offsetXY="5 0" rectAlignment = "MiddleLeft">Ammo</Button>
+            <Button id="ShootButton" onClick="tryShoot" class="WideButton" offsetXY="-5 0" rectAlignment="MiddleRight">11</Button>
+        </Row>
+    </TableLayout>
+</Panel>
