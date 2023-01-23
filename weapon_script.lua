@@ -1,5 +1,5 @@
 FireRate = 1 --Темп огня
-MagazineCapacity = self.getGMNotes("") --Вместительность магазина
+MagazineCapacity = 1 --Вместительность магазина
 WeaponState = 0 --Состояние оружия
 Ammo = 0 --Количество патронов к этому оружию
 AmmoInWeapon = 0 --Патроны в магазине оружия
@@ -34,12 +34,15 @@ function onload(saved_data)
         WeaponState = loaded_data.weaponState
         Ammo = loaded_data.ammo
         AmmoInWeapon = loaded_data.ammoInWeapon
+        printToAll(AmmoInWeapon)
     else
-        -- TODO: Устанавливается рандомные значения для оружия патроны, состояние и тп
+        FireRate = 1 --Темп огня
+        WeaponState = 0 --Состояние оружия
+        Ammo = 0 --Количество патронов к этому оружию
+        AmmoInWeapon = 0 --Патроны в магазине оружия
     end
     MagazineCapacity = self.getGMNotes("")
-    adjustUISize()
-    
+    Wait.frames(adjustUISize, 10)
     updateButtonText("AmmoButton", Ammo)
     updateButtonText("ShootButton", AmmoInWeapon)
 end

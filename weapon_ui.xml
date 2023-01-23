@@ -20,8 +20,8 @@
             </Panel>
         </Row>
         <Row class="top">
-            <Button id="AmmoButton" onClick="changeValue" class="WideButton" offsetXY="5 0" rectAlignment = "MiddleLeft">Ammo</Button>
-            <Button id="ShootButton" onClick="tryShoot" class="WideButton" offsetXY="-5 0" rectAlignment="MiddleRight">11</Button>
+            <Button id="AmmoButton" onClick="changeValue" class="WideButton" offsetXY="5 0" rectAlignment = "MiddleLeft">0</Button>
+            <Button id="ShootButton" onClick="tryShoot" class="WideButton" offsetXY="-5 0" rectAlignment="MiddleRight">0</Button>
         </Row>
     </TableLayout>
 </Panel>
